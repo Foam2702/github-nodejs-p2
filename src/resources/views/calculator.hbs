@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+        Calculator
+    </div>
+    {{!-- calculationMVCpattern --}}
+    <div class="card-body">
+        <form action="/calculator" method="POST">
+            <div class="input-group mb-3">
+                <span class="input-group-text">X</span>
+                <input type="text" name="valueX" class="form-control" placeholder="Số thứ nhất" />
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Y</span>
+                <input type="text" name="valueY" class="form-control" placeholder="Số thứ hai" />
+            </div>
+
+            <select class="form-select" aria-label="Default select example" name="operator">
+                <option selected value="sum">+</option>
+                <option value="subtract">-</option>
+                <option value="multi">X</option>
+                <option value="divide">:</option>
+            </select>
+
+            <div class="mt-1 mb-1 text-end">
+                <button type="submit" id="sm" class="btn btn-primary ">Calculate</button>
+            </div>
+
+        </form>
+        <div class=" mt-1 mb-1 text-end ">
+            <strong id="result" class="h1 text-white border-0 bg-info rounded-pill px-2">{{result}}</strong>
+        </div>
+    </div>
+</div>
